@@ -109,7 +109,7 @@ NODE* defaultNode(int val) {
     return  node1;
 }
 
-void reverse() {
+void tranverse() {
 
     NODE *_temp = _head;
     int tag = 0;
@@ -136,10 +136,10 @@ void demo() {
     insertNodeAtHead(defaultNode(2));
     insertNodeAtHead(defaultNode(3));
     insertNodeAtHead(defaultNode(4));
-    reverse();
+    tranverse();
 
     removeTailNode();
-    reverse();
+    tranverse();
     removeTailNode();
-    reverse();
+    tranverse();
 }

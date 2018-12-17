@@ -51,7 +51,7 @@ int pop() {
 }
 
 // 遍历
-void reverse() {
+void tranverse() {
 
     NODE *_temp = _top;
     int tag = 0;
@@ -81,12 +81,12 @@ void demo() {
     push(4);
     push(1);
 
-    reverse();
+    tranverse();
 
     pop();
     pop();
 
-    reverse();
+    tranverse();
 
 //    printf("value: %d\n", _top.val);
 }
