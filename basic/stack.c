@@ -14,13 +14,13 @@ typedef struct Node{
 
 
 // 栈顶
-NODE *_top;
+NODE *_top = NULL;
 int size = 0;
 
 // 判断是否为空
 bool isEmpty() {
 
-    return _top->val == 0;
+    return (_top == NULL);
 }
 
 // push
@@ -54,19 +54,21 @@ int pop() {
 void reverse() {
 
     NODE *_temp = _top;
-
-    printf("value: %d\n", _temp->val);
-    printf("value: %d\n", _temp->next->val);
-
-
-//    while (_temp.val != 0) {
-//        printf("value: %d\n", _temp.val);
-//        if (_temp.next != NULL) {
-//            _temp = *_temp.next;
-//        }else {
-//            break;
-//        }
-//    }
+    int tag = 0;
+    while (_temp != NULL) {
+        if (tag == 0) {
+            printf("stack: %d", _temp->val);
+        } else {
+            printf(" -> %d", _temp->val);
+        }
+        tag ++;
+        if (_temp->next != NULL) {
+            _temp = _temp->next;
+        }else {
+            printf("\n");
+            break;
+        }
+    }
 }
 
 void demo() {
@@ -75,9 +77,16 @@ void demo() {
 //    _top.val = 1;
     push(1);
     push(2);
+    push(7);
+    push(4);
+    push(1);
+
     reverse();
 
-//    pop();
-//    pop();
+    pop();
+    pop();
+
+    reverse();
+
 //    printf("value: %d\n", _top.val);
 }

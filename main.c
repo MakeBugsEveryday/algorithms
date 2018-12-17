@@ -1,5 +1,6 @@
 #include <stdio.h>
-#include "basic/stack.c"
+//#include "basic/stack.c"
+#include "basic/lru.c"
 
 int main() {
     printf("Hello, World!\n");
