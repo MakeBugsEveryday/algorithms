@@ -65,6 +65,7 @@ void mergeSort_bottom2Top(int arr[], int arrCount) {
 
     // 确立数组大小, 1, 2, 4, 8, 16,
     for (int i = 1; i < arrCount; i=2*i) {
+        // 等长度数组进行排序处理
         for (int lo = 0; lo < arrCount - i; lo+=2*i) {
             // 注意这里要处理边界情况
             merge(arr, lo, lo+i-1, MIN(arrCount-1, lo+i+i-1));
