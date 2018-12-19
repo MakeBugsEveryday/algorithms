@@ -1,0 +1,3 @@
+/Volumes/SubMadao/git4Madao/algorithms/CMakeFiles/rebuild_cache.dir
+/Volumes/SubMadao/git4Madao/algorithms/CMakeFiles/edit_cache.dir
+/Volumes/SubMadao/git4Madao/algorithms/CMakeFiles/algorithms.dir

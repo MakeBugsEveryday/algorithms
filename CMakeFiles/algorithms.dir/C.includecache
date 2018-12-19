@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Volumes/SubMadao/git4Madao/algorithms/main.c
+stdio.h
+-
+sort/mergeSort.c
+/Volumes/SubMadao/git4Madao/algorithms/sort/mergeSort.c
+
+/Volumes/SubMadao/git4Madao/algorithms/sort/mergeSort.c
+stdio.h
+-
+stdlib.h
+-
+math.h
+-
+
