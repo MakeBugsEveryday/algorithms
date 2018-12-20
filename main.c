@@ -7,7 +7,8 @@
 //#include "sort/insertSort.c"
 //#include "sort/shellSort.c"
 //#include "sort/mergeSort.c"
-#include "sort/quickSort.c"
+//#include "sort/quickSort.c"
+#include "sort/heapSort.c"
 
 int main() {
     printf("Hello, World!\n");

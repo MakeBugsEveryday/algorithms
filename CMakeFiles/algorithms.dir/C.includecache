@@ -9,14 +9,14 @@
 /Volumes/SubMadao/git4Madao/algorithms/main.c
 stdio.h
 -
-sort/quickSort.c
-/Volumes/SubMadao/git4Madao/algorithms/sort/quickSort.c
+sort/heapSort.c
+/Volumes/SubMadao/git4Madao/algorithms/sort/heapSort.c
 
-/Volumes/SubMadao/git4Madao/algorithms/sort/quickSort.c
+/Volumes/SubMadao/git4Madao/algorithms/sort/heapSort.c
 stdio.h
 -
-stdlib.h
--
 stdbool.h
+-
+stdlib.h
 -
 
