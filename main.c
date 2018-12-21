@@ -8,7 +8,11 @@
 //#include "sort/shellSort.c"
 //#include "sort/mergeSort.c"
 //#include "sort/quickSort.c"
-#include "sort/heapSort.c"
+//#include "sort/heapSort.c"
+
+// -------- 查找
+//#include "search/binarySearch.c"
+#include "search/bst.c"
 
 int main() {
     printf("Hello, World!\n");

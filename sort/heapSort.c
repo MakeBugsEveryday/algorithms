@@ -56,7 +56,7 @@ void sink(int arr[], int arrCount, int k) {
 }
 
 /*
- * 堆排序
+ * 堆排序 复杂度 NlogN
  *
  * 使用长度为 N+1 的数组， 我们不会使用 下标 为 0 的元素
  *

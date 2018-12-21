@@ -3,4 +3,5 @@
 
 CMakeFiles/algorithms.dir/main.c.o
  /Volumes/SubMadao/git4Madao/algorithms/main.c
- /Volumes/SubMadao/git4Madao/algorithms/sort/heapSort.c
+ /Volumes/SubMadao/git4Madao/algorithms/search/bst.c
+ /Volumes/SubMadao/git4Madao/algorithms/search/node.c
