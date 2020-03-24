@@ -47,7 +47,6 @@ int participate(int arr[], int low, int high)
         Swap(arr, i, j);
     }
     
-    
     // j 和 low 交换
     Swap(arr, j, low);
     return j;
