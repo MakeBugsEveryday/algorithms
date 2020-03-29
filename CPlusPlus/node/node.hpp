@@ -38,6 +38,9 @@ public:
     // 删除重复节点，重复的不保留
     static Node *removeDuplicate2(Node *head);
 
+    // 删除链表所有所有 k 值
+    static Node *removeAllValuesInElement(Node *head, int k);
+
     // 打印链表
     Node *debugPrint();
     // 反向打印
@@ -309,6 +312,44 @@ Node * Node::removeDuplicate2(Node *head) {
     }
 
     return head;
+}
+
+Node * Node::removeAllValuesInElement(Node *head, int k){
+
+    Node *cur = head;
+    Node *previous = nullptr;
+    Node *newHead = head;
+    while (cur->next != nullptr)
+    {
+        // 删除节点
+        if (cur->value == k)
+        {
+            if (cur == newHead)
+            {
+                // 如果是头结点
+                newHead = newHead->next;   
+
+                // 更新cur指针
+                cur = cur->next;
+                previous = nullptr;
+            }
+            else if(previous != nullptr) {
+
+                // 非头结点，直接删除cur节点
+                previous->next = cur->next;
+                // 更新指针
+                // previous = cur;
+                cur = cur->next;
+            }
+        }
+        else
+        {
+            previous = cur;
+            cur = cur->next;
+        }
+    }
+    
+    return newHead;
 }
 
 Node * Node::debugPrint() {
