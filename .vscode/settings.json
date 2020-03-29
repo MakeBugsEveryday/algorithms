@@ -20,6 +20,10 @@
         "ratio": "cpp",
         "streambuf": "cpp",
         "string_view": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "__config": "cpp",
+        "__nullptr": "cpp",
+        "__locale": "cpp",
+        "ios": "cpp"
     }
 }
