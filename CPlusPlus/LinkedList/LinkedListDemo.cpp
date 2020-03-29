@@ -4,11 +4,20 @@
 
 int main(int argc, char const *argv[])
 {
-    int arr[] = {0, 1, 2, 3, 4, 5};
+    int arr[] = {0, 0, 1, 2, 2, 3, 4, 5};
     // 创建链表
     Node *head = Node::createLinkedList(arr, sizeof(arr) / sizeof(arr[0]));
     head->debugPrint();
-    
+    head->debugPrintReversingly();
+
+    // 删除重复节点
+    // Node::removeDuplicate1(head);
+    // head->debugPrint();
+
+    // 删除重复节点2
+    Node *newHead = Node::removeDuplicate2(head);
+    newHead->debugPrint();
+
     // 反转链表
     // head = Node::reverseLinkedList(head);
     // head->debugPrint();
