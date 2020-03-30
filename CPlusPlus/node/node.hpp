@@ -28,6 +28,9 @@ public:
     static Node *findIntersectionNode(Node *headA, Node *headB);
 
     // 查找链表是否有环
+    // 延伸：求环的长度
+    // 延伸：求环入口节点
+    // 延伸：求链表长度
     static bool findCircle(Node *headA);
 
     // 查找链表倒数第n个节点
@@ -40,6 +43,12 @@ public:
 
     // 删除链表所有所有 k 值
     static Node *removeAllValuesInElement(Node *head, int k);
+
+    // 将小于和大于给定值的节点划分到链表两侧
+    static Node *partitionLinkedList(Node *head, int k);
+
+    // 将奇数和偶数的节点分在链表两侧
+    static Node *oddEvenLinkedList(Node *head);
 
     // 打印链表
     Node *debugPrint();
@@ -351,6 +360,98 @@ Node * Node::removeAllValuesInElement(Node *head, int k){
     
     return newHead;
 }
+
+// 将小于和大于给定值的节点划分到链表两侧
+Node *Node::partitionLinkedList(Node *head, int k) {
+
+    Node *smallerHeader = new Node(-1);
+    Node *curSmallerHeader = smallerHeader;
+
+    Node *greaterHeader = new Node(-1);
+    Node *curGreaterHeader = greaterHeader;
+
+    Node *euqalHeader = new Node(-1);
+    Node *curEuqalHeader = euqalHeader;
+
+    Node *cur = head;
+    while (cur != nullptr)
+    {
+        if (cur->value == k)
+        {
+            curEuqalHeader->next = cur;
+            curEuqalHeader = cur;
+        }
+        else if(cur->value > k)
+        {
+            curGreaterHeader->next = cur;
+            curGreaterHeader = cur;
+        }
+        else if(cur->value < k)
+        {
+            curSmallerHeader->next = cur;
+            curSmallerHeader = cur;
+        }
+
+        cur = cur->next;
+    }
+    
+    // 清空右侧指针域
+    curEuqalHeader->next = nullptr;
+    curGreaterHeader->next = nullptr;
+
+    // 拼凑节点
+    if (euqalHeader->next != nullptr)
+    {
+        curSmallerHeader->next = euqalHeader->next;
+        curEuqalHeader->next = greaterHeader->next;
+    }
+    else
+    {
+        curSmallerHeader->next = greaterHeader->next;
+    }
+
+    return smallerHeader->next;
+}
+
+// 将基数偶数的节点分在链表两侧
+Node * Node::oddEvenLinkedList(Node *head) {
+
+    Node *oddHeader = new Node(-1);
+    Node *curOdd = oddHeader;
+    Node *evenHeader = new Node(-1);
+    Node *curEven = evenHeader;
+
+    Node *cur = head;
+
+    int idx = 1;
+    while (cur != nullptr)
+    {
+        
+        if (idx % 2 == 0)
+        {
+            // 偶数
+            curEven->next = cur;
+            curEven = cur;
+        }
+        else {
+            // 奇数
+            curOdd->next = cur;
+            curOdd = cur;
+        }
+        
+        idx ++;
+        cur = cur->next;
+    }
+    
+    curEven->next = nullptr;
+    curOdd->next = nullptr;
+
+    // 合并节点
+    curOdd->next = evenHeader->next;
+
+    return oddHeader->next;
+}
+
 
 Node * Node::debugPrint() {
 

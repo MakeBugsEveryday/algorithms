@@ -4,7 +4,7 @@
 
 int main(int argc, char const *argv[])
 {
-    int arr[] = {0, 0, 1, 2, 2, 3, 4, 5};
+    int arr[] = {0, 0, 1, 2, 6, 2, 3, 4, 5};
     // 创建链表
     Node *head = Node::createLinkedList(arr, sizeof(arr) / sizeof(arr[0]));
     head->debugPrint();
@@ -19,8 +19,8 @@ int main(int argc, char const *argv[])
     // newHead->debugPrint();
 
     // 删除所有节点
-    Node *deleteHead = Node::removeAllValuesInElement(head, 2);
-    deleteHead->debugPrint();
+    // Node *deleteHead = Node::removeAllValuesInElement(head, 2);
+    // deleteHead->debugPrint();
 
     // 反转链表
     // head = Node::reverseLinkedList(head);
@@ -39,5 +39,13 @@ int main(int argc, char const *argv[])
     // Node *mergedNonRecursiveHead = Node::mergeNonRecursion(head, head2);
     // mergedNonRecursiveHead->debugPrint();
 
+    // 将小于和大于给定值的节点划分到链表两侧
+    head = Node::partitionLinkedList(head, 5);
+    head->debugPrint();
+
+    // 将奇偶数节点划分到链表两侧
+    head = Node::oddEvenLinkedList(head);
+    head->debugPrint();
+    
     return 0;
 }

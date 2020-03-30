@@ -24,6 +24,7 @@
         "__config": "cpp",
         "__nullptr": "cpp",
         "__locale": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "memory": "cpp"
     }
 }
