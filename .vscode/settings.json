@@ -25,6 +25,11 @@
         "__nullptr": "cpp",
         "__locale": "cpp",
         "ios": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "map": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "set": "cpp",
+        "utility": "cpp"
     }
 }

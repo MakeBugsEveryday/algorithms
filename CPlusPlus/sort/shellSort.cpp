@@ -1,7 +1,7 @@
 #include<iostream>
 using namespace std;
 
-// 通过插入排序演化而来， 步长
+// 通过插入排序演化而来， 步长为 3*n + 1
 void ShellSort(int arr[], int len)
 {
     // 构造shell排序步长， 序列为：3*n + 1

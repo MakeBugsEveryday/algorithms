@@ -55,7 +55,7 @@ void Sink(int arr[], int len, int k)
 /* 堆排序 */
 void HeapSort(int arr[], int len)
 {    
-    // 数组从右至左，调用sink构造子堆，特别的叶子节点不需要sink操作
+    // 数组从右至左，调用sink构造子堆，特别的，叶子节点不需要sink操作
     for (size_t i = len / 2; i >= 1; i--)
     {
         Sink(arr, len, i);

@@ -23,9 +23,12 @@ int main(int argc, char const *argv[])
     // deleteHead->debugPrint();
 
     // 反转链表
-    // head = Node::reverseLinkedList(head);
-    // head->debugPrint();
+    head = Node::reverseLinkedList(head);
+    head->debugPrint();
 
+    head = Node::reverseLinkedListRecursion(head);
+    head->debugPrint();
+    
     // 创建链表
     // int arr2[] = {2, 4, 6, 8, 10, 12};
     // Node *head2 = Node::createLinkedList(arr2, sizeof(arr2) / sizeof(arr2[0]));
@@ -40,12 +43,12 @@ int main(int argc, char const *argv[])
     // mergedNonRecursiveHead->debugPrint();
 
     // 将小于和大于给定值的节点划分到链表两侧
-    head = Node::partitionLinkedList(head, 5);
-    head->debugPrint();
+    // head = Node::partitionLinkedList(head, 5);
+    // head->debugPrint();
 
-    // 将奇偶数节点划分到链表两侧
-    head = Node::oddEvenLinkedList(head);
-    head->debugPrint();
+    // // 将奇偶数节点划分到链表两侧
+    // head = Node::oddEvenLinkedList(head);
+    // head->debugPrint();
     
     return 0;
 }

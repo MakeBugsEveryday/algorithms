@@ -19,6 +19,8 @@ public:
 
     // 反转链表
     static Node *reverseLinkedList(Node *root);
+    // 翻转链表（递归）
+    static Node *reverseLinkedListRecursion(Node *root);
 
     // 合并链表
     static Node *merge(Node *headA, Node *headB);
@@ -114,6 +116,28 @@ Node * Node::reverseLinkedList(Node *head){
     }
 
     return pre;
+}
+
+// 递归翻转链表
+Node *Node::reverseLinkedListRecursion(Node *root) {
+
+    if (root->next == NULL) {
+        return root;
+    }
+
+    // 获取到新的头节点
+    Node *newRoot = reverseLinkedListRecursion(root->next);
+
+    // 1->2->3->4    
+    // 改变指针指向： 1->2->3<-4， 
+    // 依次递归      1->2<-3<-4
+    // 依次递归      1<-2<-3<-4
+    // 返回root     4
+    root->next->next = root;
+    // 清空 next 指针
+    root->next = NULL;
+
+    return newRoot;
 }
 
 // 合并有序链表 (递归方式)
