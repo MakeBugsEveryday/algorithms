@@ -347,6 +347,33 @@ Node * Node::removeDuplicate2(Node *head) {
     return head;
 }
 
+// 递归删除
+// ListNode* removeElements(ListNode* head, int val) {
+    
+//     // 当前节点为空
+//     if (head == NULL) {
+//         return NULL;
+//     }
+    
+//     // 尾巴节点为空
+//     if (head->val == val && head->next == NULL) {
+//         return NULL;
+//     }
+    
+//     head->next = removeElements(head->next, val);
+    
+//     if (head->val == val) {
+//         if (head->next != NULL) {
+//             head->val = head->next->val;
+//             head->next = head->next->next;
+//         }else {
+//             return head->next;
+//         }
+//     }
+    
+//     return head;
+// }
+
 Node * Node::removeAllValuesInElement(Node *head, int k){
 
     Node *cur = head;

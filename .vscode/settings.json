@@ -30,6 +30,7 @@
         "deque": "cpp",
         "list": "cpp",
         "set": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "iosfwd": "cpp"
     }
 }
